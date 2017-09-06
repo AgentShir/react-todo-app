@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import store from '../store';
 
-class StudentList extends Component {
+class ToDoList extends Component {
   state = {
-    students:[]
+    tasks:[]
   }
 
   componentWillMount() {
     store.subscribe(() => {
       const appState = store.getState()
       this.setState({
-        students: appState.students
+        tasks: appState.tasks
       })
     })
   }
@@ -19,8 +19,8 @@ class StudentList extends Component {
     return (
       <div>
         <ul>
-          {this.state.students.map(student => {
-            return <li>{student.fname} {student.lname}</li>
+          {this.state.todo.map(todo => {
+            return <li>{tasks.todo}</li>
           })}
         </ul>
       </div>
@@ -28,4 +28,4 @@ class StudentList extends Component {
   }
 }
 
-export default StudentList;
+export default ToDoList;

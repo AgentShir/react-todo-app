@@ -1,11 +1,11 @@
 const initialState = {
-  students: []
+  tasks: []
 }
 
 export default function(state = initialState, action){
   switch(action.type) {
-    case 'ADD_STUDENT':
-      return {...state, students:[...state.students, action.student]}
+    case 'ADD_TASK':
+      return {...state, tasks:[...state.tasks, action.todo]}
     default:
       return state
   }
