@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addTask } from '../actions/task';
+import { addTodo } from '../actions/todos';
 
 class TodoForm extends Component {
   state = {
@@ -8,9 +8,7 @@ class TodoForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    addTask({
-      todo: this.state.todo
-    })
+    addTodo(this.state.value)
   }
 
   handleChange = (e) => {
@@ -23,7 +21,7 @@ class TodoForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.value} name="value" placeholder="Task" />
+          <input type="text" onChange={this.handleChange} value={this.state.value} name="value" placeholder="Enter a To Do!" />
           <button className="btn btn-outline-primary" type="submit">Submit</button>
         </form>
       </div>

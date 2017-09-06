@@ -1,8 +1,8 @@
 import store from '../store'
 
-export function addTask(todo){
+export function addTodo(todo){
    store.dispatch({
-     type: 'ADD_TASK',
+     type: 'ADD_TODO',
      todo: todo
    })
 }
