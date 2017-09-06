@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import store from '../store';
 
-class TaskList extends Component {
+class TodoList extends Component {
   state = {
     tasks:[]
   }
@@ -28,4 +28,4 @@ class TaskList extends Component {
   }
 }
 
-export default TaskList;
+export default TodoList;

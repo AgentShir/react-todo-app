@@ -1,5 +1,5 @@
 const initialState = {
-  tasks: []
+  todo: []
 }
 
 export default function(state = initialState, action){
