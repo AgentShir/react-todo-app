@@ -18,3 +18,10 @@ export function removeTodo(id) {
     id: id
   })
 }
+
+export function completedTodo(id) {
+  store.dispatch({
+    type: 'COMPLETE_TODO',
+    id: id
+  })
+}

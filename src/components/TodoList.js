@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import store from '../store';
 import {connect} from 'react-redux';
 import TodoItem from './TodoItem';
 
@@ -8,7 +7,7 @@ class TodoList extends Component {
     todos:[]
   }
 
-  
+
 
   render() {
     return (

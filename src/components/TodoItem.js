@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import {removeTodo} from '../actions/todos';
+import {removeTodo, completedTodo} from '../actions/todos';
 
 class TodoItem extends Component {
-  handleClick = (e) => {
+  complete = (e) => {
+    completedTodo(this.props.id)
+  }
+
+  remove = (e) => {
     removeTodo(this.props.id)
   }
 
   render() {
     return(
-      <li>
-        {this.props.text} <button className="btn btn-outline-primary" onClick={this.handleClick}>Remove</button>
+      <li className={this.props.status}>
+        {this.props.text} <button onClick={this.remove} className="btn btn-outline-primary">Remove</button>
+        <button onClick={this.complete} className="btn btn-outline-primary">Mark Complete</button>
       </li>
     )
   }
