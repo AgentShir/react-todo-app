@@ -3,7 +3,7 @@ import { addTask } from '../actions/task';
 
 class TaskForm extends Component {
   state = {
-    task:''
+    todo:''
   }
 
   handleChange = (e) => {
@@ -15,7 +15,7 @@ class TaskForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     addTask({
-      task: this.state.task
+      todo: this.state.todo
     })
   }
 

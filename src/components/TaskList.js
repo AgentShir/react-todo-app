@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import store from '../store';
 
-class ToDoList extends Component {
+class TaskList extends Component {
   state = {
     tasks:[]
   }
@@ -19,8 +19,8 @@ class ToDoList extends Component {
     return (
       <div>
         <ul>
-          {this.state.todo.map(todo => {
-            return <li>{tasks.todo}</li>
+          {this.state.tasks.map(todo => {
+            return <li>{todo.tasks}</li>
           })}
         </ul>
       </div>
@@ -28,4 +28,4 @@ class ToDoList extends Component {
   }
 }
 
-export default ToDoList;
+export default TaskList;
