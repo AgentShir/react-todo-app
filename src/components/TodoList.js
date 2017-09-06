@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 import store from '../store';
 import {connect} from 'react-redux';
+import TodoItem from './TodoItem';
 
 class TodoList extends Component {
   state = {
-    tasks:[]
+    todos:[]
   }
 
-  componentWillMount() {
-    store.subscribe(() => {
-      const appState = store.getState()
-      this.setState({
-        tasks: appState.tasks
-      })
-    })
-  }
+  
 
   render() {
     return (
       <div>
         <ul>
-          {this.props.todos.map(todo => {
-            return <li>{todo}</li>
-          })}
+          {this.props.todos.map(todo => (
+            <TodoItem key={todo.id} {...todo} />
+          ))}
         </ul>
       </div>
     )
