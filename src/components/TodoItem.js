@@ -13,8 +13,8 @@ class TodoItem extends Component {
   render() {
     return(
       <li className={this.props.status}>
-        {this.props.text} <button onClick={this.remove} className="btn btn-outline-primary">Remove</button>
-        <button onClick={this.complete} className="btn btn-outline-primary">Mark Complete</button>
+        {this.props.text} <button onClick={this.remove} className="btn btn-outline-danger btn-sm">Remove</button>
+        <button onClick={this.complete} className="btn btn-outline-primary btn-sm">Mark Complete</button>
       </li>
     )
   }

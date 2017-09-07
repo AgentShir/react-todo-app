@@ -22,7 +22,7 @@ class TodoForm extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleChange} value={this.state.value} name="value" placeholder="Enter a To Do!" />
-          <button className="btn btn-outline-primary" type="submit">Submit</button>
+          <button className="btn btn-outline-primary btn-sm" type="submit">Submit</button>
         </form>
       </div>
     )
